@@ -49,7 +49,7 @@ print(iris.target.shape)
 
 
 from sklearn.neighbors import KNeighborsClassifier
-knn = KNeighborsClassifier(n_neighbors=1)
+knn = KNeighborsClassifier(n_neighbors=11)
 
 
 # ### treinar máquina
@@ -100,6 +100,14 @@ print(acertos)
 
 # In[ ]:
 
+###Aplicação do modelo de regressão Logística
+
+from sklearn.linear_model import LogisticRegression
+logreg = LogisticRegression()
+logreg.fit(x_train, y_train)
+previsoes_logreg = logreg.predict(x_test)
+acertos_logreg = metrics.accuracy_score(y_test, previsoes_logreg)
+print(acertos_logreg)
 
 
 
