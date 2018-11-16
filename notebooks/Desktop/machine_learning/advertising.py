@@ -27,4 +27,10 @@ from sklearn.linear_model import LinearRegression
 reglin = LinearRegression()
 reglin.fit(x_train, y_train)
 
+# Cofientes: Aumento nas vendas para cada $1 investido em publicidade
 list(zip(['TV', 'radio', 'newspaper'], reglin.coef_))
+
+#Previsão
+print(reglin.predict([[230.1,37.8,69.2]]))
+y_prev = reglin.predict(x_test)
+print(y_prev)
