@@ -34,3 +34,20 @@ list(zip(['TV', 'radio', 'newspaper'], reglin.coef_))
 print(reglin.predict([[230.1,37.8,69.2]]))
 y_prev = reglin.predict(x_test)
 print(y_prev)
+
+print(y_test)
+
+# Avaliações da Performace
+# MAE (Absolute error)
+
+from sklearn import metrics
+print(metrics.mean_absolute_error(y_test,y_prev))
+
+# MSE(Mea square error)
+
+print(metrics.mean_squared_error(y_test,y_prev))
+
+# RMSE (Root mean square error)
+
+import numpy as np
+print(np.sqrt(metrics.mean_squared_error(y_test,y_prev)))
