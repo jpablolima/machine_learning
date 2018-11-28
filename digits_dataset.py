@@ -45,7 +45,8 @@ def rgb2gray(rgb):
     #print(img_array)
     return img_array
 
-    
+
     rgb2gray(img)    
+
 
 
