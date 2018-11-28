@@ -27,5 +27,25 @@ previsoes = classifier.predict(x_test)
 acertos = metrics.accuracy_score(y_test, previsoes)
 print(acertos)
 
+# Leitura de imagem de um dígito
+
+import numpy as  np
+import matplotlib.image as mpimg
+
+img = mpimg.imread('number.png')
+#print(img)
+
+
+def rgb2gray(rgb):
+    img_array = np.dot(rgb[...:3], [0.299,0.587,0.114])
+    #print(img_array)
+    img_array = (16 - (img_array *16)).astype(int)
+    #print(img_array)
+    img_array = img_array.flatten()
+    #print(img_array)
+    return img_array
+
+    
+    rgb2gray(img)    
 
 
